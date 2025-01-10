@@ -6,17 +6,21 @@ function sumar(numero1, numero2) {
 }
 
 function restar(numero1, numero2) {
-    return numero1 + numero2;
+    return numero1 - numero2;
 }
 
+const numero1 = document.querySelector('#numero1').value;
+const numero2 = document.querySelector('#numero2').value;
+
+/*
+const numero1 = parseInt(document.querySelector('#numero1').value);
+const numero2 = parseInt(document.querySelector('#numero2').value);
+*/
+
 document.querySelector('#sumar').addEventListener('click', () => {
-    const numero1 = document.querySelector('#numero1').value;
-    const numero2 = document.querySelector('#numero2').value;
     document.querySelector('#resultado').textContent = sumar(numero1, numero2);
 });
 
-document.querySelector('#restar').addEventListener('click', () => {
-    const numero1 = document.querySelector('#numero1').value;
-    const numero2 = document.querySelector('#numero2').value;
+document.querySelector('#restar').addEventListener('click', () => { 
     document.querySelector('#resultado').textContent = restar(numero1, numero2);
 });
