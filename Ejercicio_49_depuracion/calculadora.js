@@ -18,7 +18,11 @@ const numero2 = parseInt(document.querySelector('#numero2').value);
 */
 
 document.querySelector('#sumar').addEventListener('click', () => {
-    document.querySelector('#resultado').textContent = sumar(numero1, numero2);
+    try {
+        document.querySelector('#resultado').textContent = sumar(numero1, numero2);
+    } catch (error) {
+        document.querySelector('#resultado').textContent = error.message;
+    }
 });
 
 document.querySelector('#restar').addEventListener('click', () => { 
