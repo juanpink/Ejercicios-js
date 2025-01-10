@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="botones">
+        <button id="boton-todas" class="boton-accion">Resalta Todas</button>
+        <button id="boton-sencillas" class="boton-accion">Resalta Sencillas</button>
+        <button id="boton-dobles" class="boton-accion">Resalta Dobles</button>
+    </div>
+
+    <div class="room sencilla">
+        <div class="imagen">
+            <img src="https://mayer-house.b-cdn.net/wp-content/uploads/2022/04/Suites-high-rez-4-500x500.jpg">
+        </div>
+        <div class="contenido">
+            <span>Precio: 100€</span>
+        </div>
+    </div>
+    <div class="room doble">
+        <div class="imagen">
+            <img src="https://mayer-house.b-cdn.net/wp-content/uploads/2022/04/Suites-high-rez-4-500x500.jpg">
+        </div>
+        <div class="contenido">
+            <span>Precio: 100€</span>
+        </div>
+    </div>
+    <div class="room sencilla">
+        <div class="imagen">
+            <img src="https://mayer-house.b-cdn.net/wp-content/uploads/2022/04/Suites-high-rez-4-500x500.jpg">
+        </div>
+        <div class="contenido">
+            <span>Precio: 100€</span>
+        </div>
+    </div>
+    <div class="room doble">
+        <div class="imagen">
+            <img src="https://mayer-house.b-cdn.net/wp-content/uploads/2022/04/Suites-high-rez-4-500x500.jpg">
+        </div>
+        <div class="contenido">
+            <span>Precio: 100€</span>
+        </div>
+    </div>
+    <div class="room doble">
+        <div class="imagen">
+            <img src="https://mayer-house.b-cdn.net/wp-content/uploads/2022/04/Suites-high-rez-4-500x500.jpg">
+        </div>
+        <div class="contenido">
+            <span>Precio: 100€</span>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+
+    document.querySelector("#boton-todas").addEventListener("click", () => {
+        document.querySelectorAll(".room").forEach((room) => {
+            room.style.backgroundColor='red';
+        });
+    });
+
+    document.querySelector("#boton-sencillas").addEventListener("click", () => {
+        document.querySelectorAll(".sencilla").forEach((room) => {
+            room.style.backgroundColor='green';
+        });
+
+        document.querySelectorAll(".doble").forEach((room) => {
+            room.style.backgroundColor='white';
+        });
+    });
+
+    document.querySelector("#boton-dobles").addEventListener("click", () => {
+        document.querySelectorAll(".doble").forEach((room) => {
+            room.style.backgroundColor='yellow';
+        });
+
+        document.querySelectorAll(".sencilla").forEach((room) => {
+            room.style.backgroundColor='white';
+        });
+    });
+    
+</script>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Series</title>
+</head>
+<body>
+    <audio id="audio-terror" src="terror.mp3">
+        ¡Pringao!
+    </audio>
+    <!--
+    1. Botón 'Terror'
+    2. Botón 'Acción'
+    3. Input de tipo texto para introducir el título.
+    4. 5 fichas de series con título, genéro e poster.
+    -->
+    <div id="menu">
+        <button id="b-terror">Terror</button>
+        <button id="b-accion">Acción</button>
+        <input type="text" id="i-titulo" placeholder="Título">
+    </div>
+    <div id="listado">
+        <div class="serie terror" titulo="strangers things">
+            <div>Stranger Things</div>
+            <div>Terror</div>
+            <div><img class="poster" src='https://m.media-amazon.com/images/I/81amUUTYFeL.jpg'></div>
+        </div>
+        <div class="serie accion" titulo="sombra y hueso">
+            <div>Sombra y hueso</div>
+            <div>Acción</div>
+            <div><img class="poster" src='https://pics.filmaffinity.com/shadow_and_bone-184093170-large.jpg'></div>
+        </div>
+        <div class="serie accion" titulo="el agente nocturno">
+            <div>El agente nocturno</div>
+            <div>Acción</div>
+            <div><img class="poster" src='https://image.tmdb.org/t/p/original/lLERheM8wL9FgYT5zLiQfi4uPnH.jpg'></div>
+        </div>
+        <div class="serie terror" titulo="from">
+            <div>From</div>
+            <div>Terror</div>
+            <div><img class="poster" src='https://image.tmdb.org/t/p/original/cjXLrg4R7FRPFafvuQ3SSznQOd9.jpg'></div>
+        </div>
+        <div class="serie terror" titulo="archivo 81">
+            <div>Archivo 81</div>
+            <div>Terror</div>
+            <div><img class="poster" src='https://image.tmdb.org/t/p/original/as0QIRSbRCOE1nr6CZyOJmqQ1z3.jpg'></div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    function seleccionarSeries(selectorGenero, bgColor){
+        let series = document.querySelectorAll(selectorGenero);
+        series.forEach((serie)=>{
+            serie.style.backgroundColor=bgColor;
+        });
+    }
+    document.querySelector("#b-terror").addEventListener("click",(event)=>{   
+        seleccionarSeries(".serie","rgb(255,235,205)");     
+        seleccionarSeries(".terror","#FF4444");
+        //let componenteAudio = document.querySelector("#audio-terror");
+        //componenteAudio.play();
+    });
+
+    document.querySelector("#b-accion").addEventListener("click",(event)=>{
+        seleccionarSeries(".serie","rgb(255,235,205)");     
+        seleccionarSeries(".accion",'orange');
+    });
+
+    let inputTitulo = document.querySelector("#i-titulo");
+    inputTitulo.addEventListener("input",(event)=>{
+        let cadenaBusqueda = inputTitulo.value.toLowerCase();
+        console.log(`Buscando ${cadenaBusqueda}`);
+        seleccionarSeries(".serie","rgb(255,235,205)");
+
+        if (cadenaBusqueda.length > 0) {
+            seleccionarSeries(`[titulo*=${cadenaBusqueda}]`, "green");
+
+            /*
+            let series = document.querySelectorAll();
+            series.forEach((serie) => {
+                serie.style.backgroundColor = "green";
+            });
+            */
+        }
+    });
+
+    
+    /*
+    //Es como el hover en CSS
+    let seriesHover = document.querySelectorAll(".serie");
+
+    for(const serie of seriesHover) {
+        serie.addEventListener("mouseover",function(event){
+            //event.currentTarget.style.backgroundColor = "lightgray";
+            this.style.backgroundColor = "rgb(235,235,205)";
+        });
+    };
+
+    for(const serie of seriesHover) {
+        serie.addEventListener("mouseout",function(event){
+            //event.currentTarget.style.backgroundColor = "lightgray";
+            this.style.backgroundColor = "rgb(255,235,205)";
+        });
+    };
+    */
+
+</script>

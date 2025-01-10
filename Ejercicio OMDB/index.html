@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mystyle.css">
+    <title>Super Pelis</title>
+
+    <script src="./myhttp.js" defer></script>
+    <script src="./app.js" defer></script>
+    <script src="./gestor-eventos.js" defer></script>
+</head>
+<body>
+    <div id="div-omdb">
+        <div id="omdb-input">
+            <input type="text" id="t-omdb" placeholder="titulo OMDB" value="">
+            <input type="text" id="t-api" placeholder="api OMDB" value="45ee35c9">
+        </div>
+        <div id="omdb-boton">
+            <button id="b-omdb">Buscar en OMDB</button>
+        </div>
+    </div>
+
+    <div id="div-formulario">
+        <div>
+            <input type="text" id="t-titulo" placeholder="Título">
+            <button id="b-titulo">Buscar</button>
+        </div>
+
+        <div>
+            <select id="s-genero">
+                <!--
+                <option value="Drama">Drama</option>
+                -->
+            </select>
+            <!--<button id="b-genero">Buscar</button>-->
+        </div>
+
+        <div>
+            <input type="number" id="t-anyo" placeholder="Año" min="1900" max="2030">
+            <button id="b-anyo">Buscar</button>
+        </div>
+
+        <div id="div-orden">
+            <label for="r-asc">Año ascendente</label>
+            <input type="radio" id="r-asc" name="ordenar" value="ascendente" checked>
+            <label for="r-desc">Año descendente</label>
+            <input type="radio" id="r-desc" name="ordenar" value="descendente">
+            <button id="b-ordenar">Ordenar</button>  
+        </div>      
+    </div>
+
+    <div id="numero-peliculas"></div>
+
+    <div id="container">
+
+        <!--
+        <div class="card">
+            <img src="https://via.placeholder.com/300x450" alt="Póster de película">
+            <div class="card-content">
+                <h3>El Padrino</h3>
+                <p><strong>Año:</strong> 1972</p>
+                <p><span class="genre">Género:</span>Movies</p>
+            </div>
+        </div>
+        -->
+
+    </div>
+</body>
+</html>

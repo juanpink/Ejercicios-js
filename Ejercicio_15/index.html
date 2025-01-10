@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertir Cadena</title>
+</head>
+<body>
+    <input type="text" id="tEntrada" placeholder="Texto a validar">
+    <button id="bConvertir">Convertir</button>
+</body>
+</html>
+
+<script>
+    document.querySelector("#bConvertir").addEventListener("click", () => {
+        let textoValido = document.querySelector("#tEntrada").value;
+        console.log("Texto validado => " + textoValido.trim().toUpperCase());
+    });
+</script>

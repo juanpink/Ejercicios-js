@@ -1,0 +1,1 @@
+document.querySelector("body").innerHTML="<h2>Texto de nivel 2</h2>";

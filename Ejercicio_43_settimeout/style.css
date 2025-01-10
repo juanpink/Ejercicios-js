@@ -1,0 +1,52 @@
+body {
+    margin: 0px;
+}
+
+#gato, #gato2 {
+    position: fixed;
+    width: 100%;
+}
+
+#gato2 {
+    z-index: -10;
+}
+
+#gato img {
+    width: 5%;
+}
+
+#gato2 img {
+    width: 5%;
+}
+
+#exorcista {
+    display: none;
+    width: 50%;
+    position: fixed;
+    bottom: 180px;
+    left: 550px;
+}
+
+#exorcista img {
+    width: 100%;
+    height: 100%;
+}
+
+#banner {
+    width: 100%;
+    height: 100px;
+    background-color: rgba(0, 255, 255, 0.5);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    position: fixed;
+    bottom: 0px;
+}
+
+p{
+    color: red;
+    font-weight: bold;
+    font-size: 2rem;
+}

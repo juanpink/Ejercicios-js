@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valores a Variables</title>
+</head>
+<body>
+    <div><input type="text" id="texto" placeholder="Introduce un texto"></div>
+    <div><input type="number" id="numero" placeholder="Introduce un número"></div>
+    <div><label for="sino">Si/No</label><input type="checkbox" id="sino"></div>
+    <div><button id="boton">Aceptar</button></div>
+    
+</body>
+</html>
+
+<script>
+    document.querySelector("#boton").addEventListener("click", () => {
+        let texto = document.querySelector("#texto").value;
+        let numero = document.querySelector("#numero").value;
+        let sino = document.querySelector("#sino").checked;
+
+        console.log("Valor de texto => " + texto);
+        console.log("Valor de numero => " + numero);
+
+        //console.log("Valor de sino => " + sino);
+        /*
+        if (sino) {
+            console.log("Valor de sino => SI");
+        } else {
+            console.log("Valor de sino => NO");
+        }*/
+        let valorChecked = "NO";
+        if (sino) valorChecked = "SI";
+        console.log("Valor de sino => " + valorChecked);
+
+    });
+</script>

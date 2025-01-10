@@ -1,0 +1,45 @@
+body {
+    margin: 10px 0 0 0;
+}
+
+.botones {
+    display: flex;
+    justify-content: space-between;
+
+    width:30%;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.boton-accion {
+    padding: 10px;
+}
+
+.room {
+    margin: auto; /* Para que aparezca centrado */
+    width: 50%;
+    height: 200px;
+    border: 2px solid gray; /* Borde de 2px de grosor y color gris */
+    border-radius: 10px; /* Redondea las esquinas con un radio de 10px */
+    padding: 20px; /* Espacio libre interior */
+
+    margin-bottom: 10px;
+}
+
+.imagen {
+    width: 20%;
+    height: 100%;
+    float: left;
+}
+
+.imagen img {
+    width: auto;
+    height: 100%;
+}
+
+.contenido {
+    float: right;
+}

@@ -1,0 +1,39 @@
+
+#portada, #pregunta1, #pregunta2, #pregunta3, #resultado {
+    position: fixed;
+    width: 100%;
+    height: 30rem;
+    left: 100%;
+    transition: all 1s;
+}
+
+#pregunta1, #pregunta2, #pregunta3, #resultado {
+    top: 200px;
+}
+
+#portada {
+    left: 0px;
+    top: 0px;
+    background-color: aquamarine;
+    height: 42.5rem;
+}
+
+#pregunta1 {
+    background-color: blue;
+}
+
+#pregunta2 {
+    background-color: red;
+}
+
+#pregunta3 {
+    background-color: gray;
+}
+
+#resultado {
+    background-color: green;
+}
+
+
+
+

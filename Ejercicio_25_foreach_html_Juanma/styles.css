@@ -1,0 +1,134 @@
+/* Estilos básicos para el cuerpo y los elementos */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+nav {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+nav button {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+nav button:hover {
+    background-color: #555;
+}
+
+nav label {
+    color: white;
+    margin-left: 10px;
+}
+
+nav input {
+    padding: 10px;
+    margin-left: 10px;
+    font-size: 16px;
+    width: 200px;
+    border: none;
+    border-radius: 4px;
+}
+
+/* Estilos para el contenedor principal de las series */
+#series {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+#serie {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#serie h3 {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    margin: 0;
+}
+
+#serie p {
+    text-align: center;
+    padding: 5px;
+    background-color: #eee;
+    margin: 0;
+}
+
+#serie img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Media Queries para hacerlo responsive */
+@media screen and (max-width: 768px) {
+    /* Para pantallas pequeñas (móviles y tabletas en modo vertical) */
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav input {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    #series {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #serie h3 {
+        font-size: 18px;
+    }
+
+    #serie img {
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Para pantallas muy pequeñas (móviles en modo vertical) */
+    nav {
+        padding: 10px;
+    }
+
+    nav button {
+        width: 100%;
+        padding: 12px;
+        margin: 5px 0;
+    }
+
+    nav input {
+        width: 100%;
+    }
+
+    #series {
+        grid-template-columns: 1fr;
+    }
+
+    #serie h3 {
+        font-size: 16px;
+    }
+
+    #serie p {
+        font-size: 14px;
+    }
+}

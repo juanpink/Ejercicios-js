@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurador Color Texto</title>
+
+    <script src="ls_manager.js"></script>
+</head>
+<body>
+    <div>
+        <label for="i-bg-color">Color de Fondo</label>
+        <input type="color" id="i-bg-color" value="#ffffff">
+        <label for="i-text-color">Color de Texto</label>
+        <input type="color" id="i-text-color" value="#000000">
+        <button id="b-save">Guardar</button>
+    </div>
+    <div id="contenedor">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+    </div>
+</body>
+</html>
+
+<script>
+    const BACKGROUNG_COLOR_KEY = 'background_color';
+    const TEXT_COLOR_KEY = 'text_color';
+
+    document.getElementById('i-bg-color').value = getData(BACKGROUNG_COLOR_KEY) || '#ffffff';
+    document.getElementById('i-text-color').value = getData(TEXT_COLOR_KEY) || '#000000';
+
+    const contenedor = document.getElementById('contenedor');
+    const iBgColor = document.getElementById('i-bg-color');
+    const iTextColor = document.getElementById('i-text-color');
+    const bSave = document.getElementById('b-save');
+
+    contenedor.style.backgroundColor = iBgColor.value;
+    contenedor.style.color = iTextColor.value;
+
+    bSave.addEventListener('click', () => {
+        contenedor.style.backgroundColor = iBgColor.value;
+        contenedor.style.color = iTextColor.value;
+        storeData(BACKGROUNG_COLOR_KEY, iBgColor.value);
+        storeData(TEXT_COLOR_KEY, iTextColor.value);
+    });
+</script>

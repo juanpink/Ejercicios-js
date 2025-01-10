@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Series</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!--
+        1. Botón 'Terror'
+        2. Botón 'Acción'
+        3. Input de tipo texto para introducir el título.
+        4. 5 fichas de series con título, genero e imagen.
+    -->
+
+    <nav id="menu">
+        <button id="b-terror">Terror</button>
+        <button id="b-accion">Acción</button>
+        <label for="titulo">Título a buscar</label>
+        <input type="text" id="titulo" placeholder="Introduce el título">
+    </nav>
+
+    <main id="series">
+        <article id="serie" class="serie accion">
+            <h3>DeadWind</h3>
+            <p>Acción</p>
+            <img src="./img/deadwind.jpg" alt="serie deadwind">
+        </article>
+
+        <article id="serie" class="serie accion">
+            <h3>Ozark</h3>
+            <p>Acción</p>
+            <img src="./img/ozark.jpg" alt="serie Ozark">
+        </article>
+
+        <article id="serie" class="serie terror">
+            <h3>La última noche en Tremor</h3>
+            <p>Terror</p>
+            <img src="./img/tremor.jpg" alt="serie La última noche en Tremor">
+        </article>
+
+        <article id="serie" class="serie terror">
+            <h3>Rumbo al infierno</h3>
+            <p>Terror</p>
+            <img src="./img/rumbo.jpg" alt="serie rumbo al infierno">
+        </article>
+
+        <article id="serie" class="serie accion">
+            <h3>La jaula</h3>
+            <p>Acción</p>
+            <img src="./img/jaula.jpg" alt="serie la jaula">
+        </article>
+    </main>
+    
+</body>
+</html>
+
+<script>
+    document.querySelector("#b-terror").addEventListener("click", (event) => {
+        let series = document.querySelectorAll(".terror");
+        series.forEach((serie) => {
+            serie.style.backgroundColor = 'red';
+            serie.style.border = "5px solid red";
+        });
+
+        let demas = document.querySelectorAll(".accion");
+        demas.forEach((serie) => {
+            serie.style.backgroundColor = 'white';
+            serie.style.border = "5px solid white";
+        });
+    });
+
+    document.querySelector("#b-accion").addEventListener("click", (event) => {
+        let series = document.querySelectorAll(".accion");
+        series.forEach((serie) => {
+            serie.style.backgroundColor = 'green';
+            serie.style.border = "5px solid green";
+        });
+
+        let demas = document.querySelectorAll(".terror");
+        demas.forEach((serie) => {
+            serie.style.backgroundColor = 'white';
+            serie.style.border = "5px solid white";
+        });
+    });
+
+    /*
+    document.querySelector("#titulo").addEventListener("input", (event) => {
+        console.log("Probando ", event.srcElement.value);
+    })
+    */
+
+    document.querySelector("#titulo").addEventListener("keyUp", (event) => {
+        let cadenaBusqueda = document.querySelector("#titulo").value;
+        console.log(cadenaBusqueda);
+    })
+</script>

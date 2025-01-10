@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 03</title>
+</head>
+<body>
+    <div><h1 id="titulo-1">Título Nivel 1</h1></div>
+    <div><h2>Título Nivel 2</h2></div>
+    <div id="div-ct"><button id="boton-1">Cambiar Título 1</button></div>
+    <div><button>Cambiar Título 1</button></div>
+</body>
+</html>
+
+<script>
+    //document.getElementById('boton-1').innerHTML="Formatear";
+
+    function saludar() {
+        alert("Botón pulsado");
+    }
+
+    function cambiar() {
+        document.querySelector('#titulo-1').innerHTML = "Texto Cambiado";
+    }
+
+    function noCambiar() {
+        document.querySelector('#titulo-1').innerHTML = "Título Nivel 1";
+    }
+
+    let ponTexto = ({texto = 'Prueba Fin'}) => {
+        return document.querySelector('#titulo-1').innerHTML = texto;
+    }
+
+    document.getElementById('boton-1').addEventListener("click", saludar);
+    document.querySelector('#titulo-1').addEventListener("mouseover", cambiar);
+    document.querySelector('#titulo-1').addEventListener("mouseout", noCambiar);
+
+    document.querySelector('#titulo-1').addEventListener("click", ponTexto);
+
+    /*
+    document.querySelector('#titulo-1').addEventListener("click", ({texto = "Prueba Flecha"}) => {
+        document.querySelector('#titulo-1').innerHTML = texto;
+        console.log("Valor de texto => " + texto);
+    });*/
+
+</script>

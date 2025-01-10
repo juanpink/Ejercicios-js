@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mystyle.css">
+
+    <script src="app.js" defer></script>
+</head>
+<body>
+
+    <h1>Examen</h1>
+    <div id="tiempo">
+        <h2>Tiempo restante</h2>
+        <h2 id="tiempoSegundos"></h2>
+    </div>
+
+    <div id="portada" class="pagina">
+        <button id="b-comenzar">Comenzar</button>
+    </div>
+    
+    <div id="pregunta1" class="pagina">
+        <h3>Pregunta 1</h3>
+        <p>¿De que color es el caballo blanco de santiago?</p>
+        <input type="radio" id="verde" name="enunciado1" value="verde" />
+        <label for="verde">Verde</label>
+        <input type="radio" id="blanco" name="enunciado1" value="blanco" />
+        <label for="blanco">Blanco</label>
+        <input type="radio" id="rojo" name="enunciado1" value="rojo" />
+        <label for="rojo">Rojo</label>
+
+        <button id="b-pregunta1">Siguiente</button>
+    </div>
+    
+    <div id="pregunta2" class="pagina">
+        <h3>Pregunta 2</h3>
+        <p>¿Qué es blanco y en botella?</p>
+        <input type="radio" id="ginebra" name="enunciado2" value="ginebra" />
+        <label for="ginebra">Ginebra</label>
+        <input type="radio" id="sidra" name="enunciado2" value="sidra" />
+        <label for="sidra">Sidra</label>
+        <input type="radio" id="leche" name="enunciado2" value="leche" />
+        <label for="leche">Leche</label>
+
+        <button id="b-pregunta2">Siguiente</button>
+    </div>
+    
+    <div id="pregunta3" class="pagina">
+        <h3>Pregunta 3</h3>
+        <p>¿Qué beben las vacas?</p>
+        <input type="radio" id="leche" name="enunciado3" value="leche" />
+        <label for="leche">Leche</label>
+        <input type="radio" id="agua" name="enunciado3" value="agua" />
+        <label for="agua">Agua</label>
+        <input type="radio" id="vino" name="enunciado3" value="vino" />
+        <label for="vino">Vino</label>
+
+        <button id="b-pregunta3">Siguiente</button>
+    </div>
+
+    <div id="resultado" class="pagina">
+        <button id="b-resultado">Fin</button>
+    </div>
+    
+</body>
+</html>
+
+<script>
+    /*
+    let segundos = 5;
+    let segundosTxt = document.querySelector('#tiempoSegundos');
+
+    setTimeout(() => {
+        segundosTxt.innerHTML = `${segundos} segundos`;
+        segundos -= 1;
+    }, 1000);
+    */
+</script>
